@@ -1,0 +1,138 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #efefef;
+}
+
+
+#content-head-table {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  right: 40px;
+}
+
+#logo-img {
+  height: 61px;
+  width: 60px;
+}
+
+#logo-name h1 {
+  margin-left: 15px;
+  margin-top: -5px;
+  font-weight: 900;
+  font-size: 26px;
+}
+
+
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.add-product-color {
+  background-color: black;
+  color: white;
+}
+
+.toolbar {
+  background-color: rgba($color: white, $alpha: 0);
+}
+
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+
+
+
+table {
+  margin-left: 50px;
+  margin-top: 50px;
+  text-align: left;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+th,
+td {
+  color: #757575;
+  background: #fedede;
+  border: 1px solid #9b9b9b;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+td {
+  background: #ffffff;
+  border: 1px solid #9b9b9b;
+}
+
+
+
+
+
+
+
+.cart-btn {
+  margin-left: 5px;
+}
+
+
+
+
+
+
+
+footer {
+  position: relative;
+  top: 380px;
+  width: 90%;
+  margin-left: 60px;
+  margin-right: 60px;
+  color: #4c4c4c;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+
+
+footer div {
+  font-weight: 700;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.policy-content {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.policy-content li {
+  position: relative;
+  top: -15px;
+}
+
+
+.bottom-right-img img {
+  position: absolute;
+  bottom: -100px;
+  right: 0px;
+  height: 220px;
+
+}

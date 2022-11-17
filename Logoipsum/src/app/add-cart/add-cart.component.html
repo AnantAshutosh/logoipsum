@@ -1,0 +1,70 @@
+<div id="bg-topRight">
+  <img src="../../assets/newImage/top-left-background.svg" alt="" />
+</div>
+
+<div class="head-content">
+  <div class="logo-name">
+    <img src="../../assets/newImage/header-logo.svg" alt="no-img" />
+    <p>Logoipsum</p>
+  </div>
+</div>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>PRODUCT</th>
+        <th>PRICE</th>
+        <th>QUANTITY</th>
+        <th>TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of products">
+        <td>
+          <button class="del-btn" (click)="delete(item)">
+            <img src="../../assets/newImage/delete-cross.png" alt="" />
+          </button>
+        </td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td>
+          <div class="inc-dec">
+            <div>
+              <button (click)="decrement(item)" id="decrement">-</button>
+            </div>
+            <div>
+              <input
+                type="number"
+                class="count-number count"
+                id="count"
+                value="{{ item.cart }}"
+                disabled="disabled"
+              />
+            </div>
+            <div>
+              <button (click)="increment(item)" id="increment">+</button>
+            </div>
+          </div>
+        </td>
+        <td>{{ item.price * item.cart }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <footer>
+    <hr />
+
+      <div class="footer-content">
+        <div class="copyright">2022 @ copyright</div>
+        <div><img src="../../assets/newImage/header-logo.svg" alt="" /></div>
+        <div class="policy-content">
+          privacy policy
+          <ul>
+            <li>terms & condition</li>
+          </ul>
+        </div>
+      </div>
+    
+</footer> -->

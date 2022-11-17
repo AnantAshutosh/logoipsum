@@ -1,0 +1,121 @@
+<div>
+  <img src="../../assets/Images/header/Background-left-logo.svg" alt="" />
+</div>
+<!-- <div class="bottom-right-img"><img src="../../assets/Images/Footer/footer_background_right.svg" alt=""></div> -->
+<div class="header">
+  <div class="logo-name">
+    <div><img src="../../assets/Images/header/Logo.svg" alt="" /></div>
+    <div><h2>Logoipsum</h2></div>
+  </div>
+  <div class="goto-btn">
+    <button routerLink="/table">Product Listing page</button>
+  </div>
+</div>
+
+<div class="form-vector">
+  <div>
+    <div><h1>Add product</h1></div>
+    <div>
+      <form [formGroup]="productForm">
+        <div>
+          <label for="fname">Name</label>
+          <input
+            name="name"
+            type="text"
+            id="fname"
+            placeholder=""
+            formControlName="name"
+            #name
+          />
+          <!-- <div>
+                    <small *ngIf="productForm.get('productForm.name').?.['required']" >First name is a required field</small>
+                  </div> -->
+          <!-- <div>
+                    <small *ngIf="name.invalid && name.touched" >First Name Is a required field</small>
+                </div> -->
+
+          <label for="fname">Price</label>
+          <input
+            name="name"
+            type="number"
+            id="price"
+            placeholder=""
+            formControlName="price"
+          />
+
+          <label for="fname">Upload Image</label>
+          <input
+            name="name"
+            type="file"
+            id="image"
+            (change)="onChange($event)"
+            value="{{ getimage }}"
+            formControlName="image"
+          />
+
+          <label for="color">Color</label>
+          <select formControlName="color" name="color" id="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+          </select>
+        </div>
+
+        <div class="form-2-div">
+          <label for="gender">Gender</label>
+          <select formControlName="gender" name="gender" id="gender">
+            <!-- <option value=""></option> -->
+            <option value="Men">Men</option>
+            <option value="Women">Women</option>
+          </select>
+          <label for="fname">Currency</label>
+          <input
+            name="name"
+            type="text"
+            id="fname"
+            placeholder=""
+            formControlName="currency"
+          />
+          <label for="fname">Quantity</label>
+          <input
+            name="name"
+            type="number"
+            id="quantity"
+            placeholder=""
+            formControlName="quantity"
+          />
+
+          <div id="btn">
+            <div><button type="reset" id="reset-button">Reset</button></div>
+            <div>
+              <button type="submit" id="save-button" (click)="addProduct()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div>
+    <img src="../../assets/Images/header/product-vector.svg" alt="" />
+  </div>
+</div>
+
+<!-- 
+<footer>
+    <hr />
+
+      <div class="footer-content">
+        <div class="copyright">2022 @ copyright</div>
+        <div><img src="../../assets/Images/Footer/Footer_logo.svg" alt="" /></div>
+        <div class="policy-content">
+          privacy policy
+          <ul>
+            <li>terms & condition</li>
+          </ul>
+        </div>
+      </div>
+    
+</footer> -->

@@ -1,0 +1,77 @@
+<h1 mat-dialog-title>Add Product</h1>
+<div mat-dialog-content>
+  <form [formGroup]="productForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput placeholder="Name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender" placeholder="Gender">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Price</mat-label>
+      <input
+        formControlName="price"
+        type="number"
+        matInput
+        placeholder="Price"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Currency</mat-label>
+      <input
+        formControlName="currency"
+        type="text"
+        matInput
+        placeholder="Currency"
+      />
+    </mat-form-field>
+    <!-- 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Upload Image</mat-label>
+            <input type="file" matInput placeholder="Upload Image"/>  
+        </mat-form-field>
+    -->
+
+    <!-- <button (click)="fileInput.click()">
+        <!-- <md-icon>library_add</md-icon> 
+        <span>Select</span>
+        <input #fileInput type="file"  style="display:none;" />
+      </button> -->
+
+    <mat-form-field appearance="outline">
+      <mat-label>Quantity</mat-label>
+      <input
+        formControlName="quantity"
+        type="number"
+        matInput
+        placeholder="Quantity"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Color</mat-label>
+      <mat-select formControlName="color" placeholder="Color">
+        <mat-option value="red">Red</mat-option>
+        <mat-option value="green">Green</mat-option>
+        <mat-option value="blue">Blue</mat-option>
+        <mat-option value="black">Black</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" (click)="addProduct()">
+    {{ actionbtn }}
+  </button>
+</div>

@@ -1,0 +1,47 @@
+{
+  "productList": [
+    {
+      "name": "shirt",
+      "gender": "Women",
+      "price": 2000,
+      "currency": "Rs",
+      "quantity": 15,
+      "color": "white",
+      "cart": 0,
+      "id": 2
+    },
+    {
+      "name": "Uspa",
+      "gender": "Women",
+      "price": 2000,
+      "currency": "Rs",
+      "quantity": 6,
+      "color": "black",
+      "image": "C:\\fakepath\\Product-img-2.svg",
+      "cart": 0,
+      "id": 3
+    },
+    {
+      "name": "Polo",
+      "gender": "Women",
+      "price": 2000,
+      "currency": "Rs",
+      "quantity": 2,
+      "color": "black",
+      "image": "C:\\fakepath\\Product-img-2.svg",
+      "cart": 0,
+      "id": 4
+    }
+  ],
+  "AddCart": [],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

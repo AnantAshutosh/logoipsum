@@ -1,0 +1,91 @@
+<div id="bg-topRight">
+  <img src="../../assets/Images/background-left-logo.svg" alt="" />
+</div>
+
+<div class="head-content">
+  <div class="logo-name">
+    <img src="../../assets/newImage/header-logo.svg" alt="" />
+    <p>Logoipsum</p>
+  </div>
+  <div>
+    <input
+      type="text"
+      class="det-serch search-logo form-control"
+      name="search"
+      [(ngModel)]="searchText"
+      autocomplete="off"
+      id="myInput"
+      placeholder="type to Search"
+    />
+  </div>
+</div>
+
+<div class="go-cart">
+  <button type="button" class="cart-logo" routerLink="/addcart">
+    Go to Cart
+  </button>
+</div>
+
+<div id="item-listing-block">
+  <div class="item-listing" *ngFor="let p of products | filter: searchText">
+    <div class="item-box">
+      <div class="item-img">
+        <img src="{{ imagelocation + p.image }}" alt="" />
+        <!-- {{p.image}} -->
+        <!-- {{ imagelocation}}Product-img-{{p.image}}.svg -->
+      </div>
+      <div class="item-content">
+        <div id="name" class="Name-item">{{ p.color }} {{ p.name }}</div>
+        <div id="price">{{ p.currency }}{{ p.price }}</div>
+        <div class="pt-2 pb-2">
+          <ul>
+            <li id="gender">
+              for <span>{{ p.gender }}</span>
+            </li>
+            <li id="type">cloth type: <span>Cotton</span></li>
+          </ul>
+        </div>
+        <div>
+          <button
+            class="button-cart"
+            *ngIf="display"
+            (click)="toggleData(p)"
+            onload="checkbtn(p)"
+          >
+            ADD TO CART
+          </button>
+
+          <div *ngIf="toDisplay" class="inc-dec">
+            <div><button (click)="decrement(p)" id="decrement">-</button></div>
+            <div>
+              <input
+                type="number"
+                class="count-number count"
+                id="count"
+                value="{{ p.cart }}"
+                disabled="disabled"
+              />
+            </div>
+            <div><button (click)="increment(p)" id="increment">+</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
+<footer>
+  <hr />
+
+    <div class="footer-content">
+      <div class="copyright">2022 @ copyright</div>
+      <div><img src="../../assets/newImage/header-logo.svg" alt="" /></div>
+      <div class="policy-content">
+        privacy policy
+        <ul>
+          <li>terms & condition</li>
+        </ul>
+      </div>
+    </div>
+  
+</footer> -->
