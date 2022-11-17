@@ -3,11 +3,6 @@ import { Injectable } from '@angular/core';
 
 
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json'
-  })
-}
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +40,7 @@ export class ApiService {
   }
 
   putCart(data: any, id: number) {
-    return this.http.put<any>("http://localhost:3000/AddCart/" + id, data, httpOptions)
+    return this.http.put<any>("http://localhost:3000/AddCart/" + id, data)
   }
 
   postCart(data: any) {
